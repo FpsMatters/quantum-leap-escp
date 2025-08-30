@@ -160,6 +160,30 @@
   .animate-rotate-in {
     animation: rotateIn 0.8s ease-out forwards;
   }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-ticker {
+    animation: ticker 20s linear infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-gradient-shift {
+    animation: gradientShift 8s ease-in-out infinite;
+  }
+  
+  .animate-chart-draw {
+    animation: chartDraw 2s ease-out forwards;
+  }
+  
+  .animate-trading-glow {
+    animation: tradingGlow 3s ease-in-out infinite alternate;
+  }
 
   /* Quantum Gradients */
   .bg-quantum-gradient {
@@ -296,4 +320,70 @@
     opacity: 1;
     transform: rotate(0deg) scale(1);
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes chartDraw {
+  from {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes tradingGlow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--quantum-gold) / 0.3), inset 0 0 20px hsl(var(--quantum-gold) / 0.1);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(var(--quantum-gold) / 0.6), inset 0 0 40px hsl(var(--quantum-gold) / 0.2);
+  }
+}
+
+/* Trading Terminal Styles */
+.trading-terminal {
+  background: linear-gradient(135deg, hsl(var(--quantum-deep-blue)), hsl(var(--quantum-navy)));
+  border: 1px solid hsl(var(--quantum-gold) / 0.3);
+  box-shadow: 0 0 30px hsl(var(--quantum-gold) / 0.2);
+}
+
+.market-data {
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.8);
+  color: hsl(var(--quantum-gold));
+  border-left: 3px solid hsl(var(--quantum-gold));
+}
+
+.chart-container {
+  background: radial-gradient(circle at center, hsl(var(--quantum-deep-blue) / 0.8), hsl(var(--quantum-navy)));
+  backdrop-filter: blur(10px);
 }
