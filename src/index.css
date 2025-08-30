@@ -2,41 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Quantum Capital Society Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    /* Quantum Capital Colors */
+    --quantum-navy: 210 38% 15%;
+    --quantum-deep-blue: 210 45% 8%;
+    --quantum-gold: 45 93% 58%;
+    --quantum-light-gold: 45 86% 65%;
+    --quantum-white: 0 0% 100%;
+    --quantum-gray: 215 25% 27%;
+    --quantum-light-gray: 215 16% 47%;
+    
+    /* Gradients */
+    --gradient-quantum: linear-gradient(135deg, hsl(var(--quantum-deep-blue)), hsl(var(--quantum-navy)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--quantum-gold)), hsl(var(--quantum-light-gold)));
+    --gradient-overlay: linear-gradient(135deg, hsl(var(--quantum-deep-blue) / 0.9), hsl(var(--quantum-navy) / 0.8));
+    
+    /* Shadows */
+    --shadow-quantum: 0 25px 50px -12px hsl(var(--quantum-deep-blue) / 0.25);
+    --shadow-gold: 0 10px 30px -10px hsl(var(--quantum-gold) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--quantum-gold) / 0.2);
+    
+    /* Design System Tokens */
+    --background: var(--quantum-white);
+    --foreground: var(--quantum-deep-blue);
+    --card: var(--quantum-white);
+    --card-foreground: var(--quantum-deep-blue);
+    --popover: var(--quantum-white);
+    --popover-foreground: var(--quantum-deep-blue);
+    --primary: var(--quantum-deep-blue);
+    --primary-foreground: var(--quantum-white);
+    --secondary: var(--quantum-navy);
+    --secondary-foreground: var(--quantum-white);
+    --muted: 215 25% 95%;
+    --muted-foreground: var(--quantum-light-gray);
+    --accent: var(--quantum-gold);
+    --accent-foreground: var(--quantum-deep-blue);
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --destructive-foreground: var(--quantum-white);
+    --border: 215 25% 90%;
+    --input: 215 25% 90%;
+    --ring: var(--quantum-gold);
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +110,190 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-semibold;
+  }
+}
+
+@layer components {
+  /* Quantum Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  .animate-fly-in {
+    animation: flyIn 0.6s ease-out forwards;
+  }
+  
+  .animate-pulse-gold {
+    animation: pulseGold 2s ease-in-out infinite;
+  }
+  
+  .animate-bounce-soft {
+    animation: bounceSoft 0.6s ease-out forwards;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-rotate-in {
+    animation: rotateIn 0.8s ease-out forwards;
+  }
+
+  /* Quantum Gradients */
+  .bg-quantum-gradient {
+    background: var(--gradient-quantum);
+  }
+  
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
+  
+  .bg-quantum-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  /* Quantum Shadows */
+  .shadow-quantum {
+    box-shadow: var(--shadow-quantum);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Interactive Elements */
+  .quantum-hover {
+    @apply transition-all duration-300 hover:shadow-glow hover:scale-105;
+  }
+  
+  .gold-hover {
+    @apply transition-all duration-300 hover:shadow-gold hover:-translate-y-1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    color: hsl(var(--quantum-gold));
+    text-shadow: 0 0 10px hsl(var(--quantum-gold) / 0.3);
+  }
+  50% {
+    color: hsl(var(--quantum-light-gold));
+    text-shadow: 0 0 20px hsl(var(--quantum-gold) / 0.5);
+  }
+}
+
+@keyframes bounceSoft {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--quantum-gold) / 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(var(--quantum-gold) / 0.6);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
   }
 }

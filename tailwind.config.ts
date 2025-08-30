@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +54,15 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				quantum: {
+					navy: 'hsl(var(--quantum-navy))',
+					'deep-blue': 'hsl(var(--quantum-deep-blue))',
+					gold: 'hsl(var(--quantum-gold))',
+					'light-gold': 'hsl(var(--quantum-light-gold))',
+					white: 'hsl(var(--quantum-white))',
+					gray: 'hsl(var(--quantum-gray))',
+					'light-gray': 'hsl(var(--quantum-light-gray))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
