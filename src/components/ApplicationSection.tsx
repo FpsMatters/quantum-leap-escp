@@ -25,7 +25,7 @@ const applicationSteps = [
 
 const ApplicationSection = () => {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section id="application" className="py-20 bg-background relative overflow-hidden">
       {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-10">
         <div 
@@ -112,7 +112,8 @@ const ApplicationSection = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <Button 
                 size="lg" 
-                className="bg-gold-gradient text-primary font-bold px-8 py-4 text-lg shadow-gold quantum-hover animate-glow"
+                className="bg-gold-gradient text-primary font-bold px-8 py-4 text-lg shadow-gold quantum-hover animate-glow transition-all duration-300 hover:scale-105"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfWaW65Hd-36E_T44P4D8RBFKcpIv8mA9bVCTgQtys2iPlGpw/viewform?usp=header', '_blank')}
               >
                 Apply Now via Google Form
                 <ExternalLink className="ml-2 w-5 h-5" />

@@ -36,7 +36,7 @@ const achievements = [
 
 const WhyJoinSection = () => {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section id="why-join" className="py-20 bg-background relative overflow-hidden">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -109,9 +109,12 @@ const WhyJoinSection = () => {
             {/* Special Callout */}
             <Card className="mt-6 p-6 bg-gold-gradient text-primary shadow-gold animate-glow">
               <div className="text-center">
-                <h3 className="text-2xl font-bold mb-3 animate-pulse-gold">
-                  🚀 No Prior Experience Required!
-                </h3>
+                <div className="flex flex-col items-center mb-3">
+                  <div className="text-3xl mb-2 animate-pulse-gold">🚀</div>
+                  <h3 className="text-2xl font-bold text-white">
+                    No Prior Experience Required!
+                  </h3>
+                </div>
                 <p className="text-lg">
                   Whether you're a beginner or experienced trader, our comprehensive training programs 
                   will elevate your skills to professional levels.

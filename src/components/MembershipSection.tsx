@@ -28,7 +28,7 @@ const roles = [
 
 const MembershipSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="membership" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
@@ -69,20 +69,20 @@ const MembershipSection = () => {
         <Card className="p-8 text-center bg-quantum-gradient shadow-quantum animate-fade-in">
           <h3 className="text-3xl font-bold text-white mb-6">Student Eligibility</h3>
           <div className="grid md:grid-cols-2 gap-8 text-white/90">
-            <div>
+            <div className="text-center">
               <h4 className="text-xl font-semibold mb-4 text-accent">Academic Requirements</h4>
-              <ul className="space-y-2 text-left">
-                <li className="flex items-center"><span className="text-accent mr-2">•</span>Currently enrolled at ESCP</li>
-                <li className="flex items-center"><span className="text-accent mr-2">•</span>Any program level (Bachelor/Master/PhD)</li>
-                <li className="flex items-center"><span className="text-accent mr-2">•</span>Minimum GPA of 3.0 preferred</li>
+              <ul className="space-y-2">
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Currently enrolled at ESCP</li>
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Any program level (Bachelor/Master/PhD)</li>
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Minimum GPA of 3.0 preferred</li>
               </ul>
             </div>
-            <div>
+            <div className="text-center">
               <h4 className="text-xl font-semibold mb-4 text-accent">Personal Qualities</h4>
-              <ul className="space-y-2 text-left">
-                <li className="flex items-center"><span className="text-accent mr-2">•</span>Strong analytical mindset</li>
-                <li className="flex items-center"><span className="text-accent mr-2">•</span>Interest in financial markets</li>
-                <li className="flex items-center"><span className="text-accent mr-2">•</span>Collaborative team player</li>
+              <ul className="space-y-2">
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Strong analytical mindset</li>
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Interest in financial markets</li>
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Collaborative team player</li>
               </ul>
             </div>
           </div>

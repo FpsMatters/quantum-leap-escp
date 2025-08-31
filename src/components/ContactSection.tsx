@@ -35,7 +35,7 @@ const partners = [
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-quantum-gradient relative overflow-hidden">
+    <section id="contact" className="py-20 bg-quantum-gradient relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-2 border-accent rounded-full animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 bg-accent/20 rotate-45 animate-bounce"></div>
@@ -81,7 +81,8 @@ const ContactSection = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-gold-gradient text-primary font-bold px-8 py-4 text-lg shadow-gold quantum-hover"
+            className="bg-gold-gradient text-primary font-bold px-8 py-4 text-lg shadow-gold quantum-hover transition-all duration-300 hover:scale-105"
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeQRE8Fauf_Fsi3GqGsHBdyVAicq6h4_D2qFyMfDREuMWi21A/viewform?usp=header', '_blank')}
           >
             Send us a Message
             <ExternalLink className="ml-2 w-5 h-5" />

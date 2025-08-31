@@ -21,7 +21,7 @@ const operatingSteps = [
 
 const HowWeOperateSection = () => {
   return (
-    <section className="py-20 bg-quantum-gradient relative overflow-hidden">
+    <section id="how-we-operate" className="py-20 bg-quantum-gradient relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 right-1/4 w-24 h-24 border-2 border-accent rounded-lg rotate-12 animate-pulse"></div>
         <div className="absolute bottom-1/4 left-1/4 w-32 h-32 border border-accent/50 rounded-full animate-bounce"></div>

@@ -1,15 +1,27 @@
-const stockData = [
-  { symbol: "AAPL", price: "175.43", change: "+2.34", percent: "+1.35%" },
-  { symbol: "GOOGL", price: "142.87", change: "+1.92", percent: "+1.36%" },
-  { symbol: "MSFT", price: "378.85", change: "-0.45", percent: "-0.12%" },
-  { symbol: "TSLA", price: "248.42", change: "+15.67", percent: "+6.73%" },
-  { symbol: "NVDA", price: "456.78", change: "+8.34", percent: "+1.86%" },
-  { symbol: "META", price: "334.12", change: "-2.87", percent: "-0.85%" },
-  { symbol: "AMZN", price: "145.67", change: "+3.21", percent: "+2.25%" },
-  { symbol: "NFLX", price: "487.93", change: "+12.45", percent: "+2.62%" }
-];
+import useStockData from "@/hooks/useStockData";
 
 const StockTicker = () => {
+  const { stockData, loading, error } = useStockData();
+
+  if (loading) {
+    return (
+      <div className="bg-quantum-gradient py-4 overflow-hidden border-y-2 border-accent/30">
+        <div className="text-center text-white font-mono">
+          <span className="animate-pulse">Loading live market data...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-quantum-gradient py-4 overflow-hidden border-y-2 border-accent/30">
+        <div className="text-center text-white font-mono">
+          <span className="text-red-400">Market data temporarily unavailable</span>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="bg-quantum-gradient py-4 overflow-hidden border-y-2 border-accent/30">
       <div className="animate-ticker whitespace-nowrap">

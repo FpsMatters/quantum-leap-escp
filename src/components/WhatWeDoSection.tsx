@@ -56,7 +56,7 @@ const activities = [
 
 const WhatWeDoSection = () => {
   return (
-    <section className="py-20 bg-quantum-gradient relative overflow-hidden">
+    <section id="what-we-do" className="py-20 bg-quantum-gradient relative overflow-hidden">
       {/* Quant Workspace Background */}
       <div 
         className="absolute inset-0 opacity-10"
@@ -130,11 +130,6 @@ const WhatWeDoSection = () => {
               
               <h3 className="text-xl font-bold text-white mb-3">{activity.title}</h3>
               <p className="text-white/80 leading-relaxed text-sm">{activity.description}</p>
-              
-              {/* Interactive Hover Effect */}
-              <div className="absolute inset-0 bg-accent/10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-accent font-semibold">Learn More →</span>
-              </div>
             </Card>
           ))}
         </div>
