@@ -17,6 +17,7 @@ const FloatingNavigation = () => {
     { id: 'hero', label: 'Home', section: 'hero' },
     { id: 'about', label: 'About', section: 'about' },
     { id: 'what-we-do', label: 'What We Do', section: 'what-we-do' },
+    { id: 'members', label: 'Members', section: 'members' },
     { id: 'why-join', label: 'Why Join', section: 'why-join' },
     { id: 'how-we-operate', label: 'How We Operate', section: 'how-we-operate' },
     { id: 'membership', label: 'Membership', section: 'membership' },
