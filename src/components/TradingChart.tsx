@@ -24,50 +24,78 @@ interface TradingChartProps {
 
 const TradingChart = ({ title = "S&P 500 Index", className = "" }: TradingChartProps) => {
   return (
-    <div className={`chart-container p-6 rounded-xl border border-accent/20 ${className}`}>
-      <div className="flex items-center justify-between mb-4">
+    <div className={`chart-container p-6 rounded-xl border border-accent/20 relative ${className}`}>
+      {/* Unblurred Title */}
+      <div className="flex items-center justify-between mb-4 relative z-20">
         <h3 className="text-xl font-bold text-white">{title}</h3>
-        <div className="flex items-center space-x-4">
-          <span className="text-accent font-mono text-lg">4,389.45</span>
-          <span className="text-green-400 font-mono text-sm">+23.67 (+0.54%)</span>
+      </div>
+      
+      {/* Blurred Chart Content */}
+      <div className="blur-sm">
+        <div className="flex items-center justify-between mb-4 opacity-0">
+          <h3 className="text-xl font-bold text-white">{title}</h3>
+          <div className="flex items-center space-x-4">
+            <span className="text-accent font-mono text-lg">4,389.45</span>
+            <span className="text-green-400 font-mono text-sm">+23.67 (+0.54%)</span>
+          </div>
+        </div>
+        
+        <div className="h-64 animate-chart-draw">
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={chartData}>
+              <defs>
+                <linearGradient id="goldGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="hsl(45, 93%, 58%)" stopOpacity={0.3}/>
+                  <stop offset="95%" stopColor="hsl(45, 93%, 58%)" stopOpacity={0}/>
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" stroke="hsl(45, 93%, 58%, 0.1)" />
+              <XAxis 
+                dataKey="time" 
+                stroke="hsl(45, 93%, 58%)" 
+                fontSize={12}
+                axisLine={false}
+                tickLine={false}
+              />
+              <YAxis 
+                stroke="hsl(45, 93%, 58%)" 
+                fontSize={12}
+                axisLine={false}
+                tickLine={false}
+                domain={['dataMin - 10', 'dataMax + 10']}
+              />
+              <Area
+                type="monotone"
+                dataKey="price"
+                stroke="hsl(45, 93%, 58%)"
+                strokeWidth={2}
+                fill="url(#goldGradient)"
+                strokeDasharray="5 5"
+                strokeDashoffset="0"
+              />
+            </AreaChart>
+          </ResponsiveContainer>
         </div>
       </div>
       
-      <div className="h-64 animate-chart-draw">
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={chartData}>
-            <defs>
-              <linearGradient id="goldGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="hsl(45, 93%, 58%)" stopOpacity={0.3}/>
-                <stop offset="95%" stopColor="hsl(45, 93%, 58%)" stopOpacity={0}/>
-              </linearGradient>
-            </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="hsl(45, 93%, 58%, 0.1)" />
-            <XAxis 
-              dataKey="time" 
-              stroke="hsl(45, 93%, 58%)" 
-              fontSize={12}
-              axisLine={false}
-              tickLine={false}
-            />
-            <YAxis 
-              stroke="hsl(45, 93%, 58%)" 
-              fontSize={12}
-              axisLine={false}
-              tickLine={false}
-              domain={['dataMin - 10', 'dataMax + 10']}
-            />
-            <Area
-              type="monotone"
-              dataKey="price"
-              stroke="hsl(45, 93%, 58%)"
-              strokeWidth={2}
-              fill="url(#goldGradient)"
-              strokeDasharray="5 5"
-              strokeDashoffset="0"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+      {/* Coming Soon Overlay */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-center">
+          <div 
+            className="text-4xl md:text-5xl font-bold text-yellow-400 animate-pulse"
+            style={{
+              textShadow: `
+                0 0 10px #fbbf24,
+                0 0 20px #fbbf24,
+                0 0 30px #fbbf24,
+                0 0 40px #fbbf24
+              `,
+              animation: 'throb 2s ease-in-out infinite alternate'
+            }}
+          >
+            COMING SOON...
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -17,19 +17,19 @@ const achievements = [
   {
     icon: TrendingUp,
     title: "Portfolio Growth",
-    value: "+247%",
+    value: "Coming soon...",
     description: "Average annual return"
   },
   {
     icon: Award,
     title: "Competition Wins",
-    value: "12",
+    value: "Coming soon...",
     description: "Inter-university victories"
   },
   {
     icon: Users2,
     title: "Alumni Network",
-    value: "300+",
+    value: "Coming soon...",
     description: "Working in top firms"
   }
 ];

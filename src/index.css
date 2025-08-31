@@ -369,6 +369,26 @@
   }
 }
 
+@keyframes throb {
+  0% {
+    text-shadow: 
+      0 0 10px #fbbf24,
+      0 0 20px #fbbf24,
+      0 0 30px #fbbf24,
+      0 0 40px #fbbf24;
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 
+      0 0 20px #fbbf24,
+      0 0 30px #fbbf24,
+      0 0 40px #fbbf24,
+      0 0 60px #fbbf24,
+      0 0 80px #fbbf24;
+    transform: scale(1.05);
+  }
+}
+
 /* Trading Terminal Styles */
 .trading-terminal {
   background: linear-gradient(135deg, hsl(var(--quantum-deep-blue)), hsl(var(--quantum-navy)));

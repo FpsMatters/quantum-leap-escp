@@ -74,7 +74,7 @@ const MembershipSection = () => {
               <ul className="space-y-2">
                 <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Currently enrolled at ESCP</li>
                 <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Any program level (Bachelor/Master/PhD)</li>
-                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Minimum GPA of 3.0 preferred</li>
+                <li className="flex items-center justify-center"><span className="text-accent mr-2">•</span>Minimum GPA of 3.5 preferred</li>
               </ul>
             </div>
             <div className="text-center">

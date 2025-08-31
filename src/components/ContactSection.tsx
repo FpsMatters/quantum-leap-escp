@@ -6,21 +6,21 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@quantumcapital-escp.com",
-    href: "mailto:contact@quantumcapital-escp.com",
+    value: "quantumcapitalsociety@gmail.com",
+    href: "mailto:quantumcapitalsociety@gmail.com",
     color: "text-accent"
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "@QuantumCapitalESCP",
+    value: "@QuantumCapitalSociety",
     href: "#",
     color: "text-blue-600"
   },
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@quantum.capital.escp",
+    value: "@algotradesdaily",
     href: "#",
     color: "text-pink-600"
   }
@@ -109,7 +109,7 @@ const ContactSection = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-white/20 animate-fade-in-delay">
           <p className="text-white/60">
-            © 2024 Quantum Capital Society - ESCP. All rights reserved.
+            © 2025 Quantum Capital Society - ESCP. All rights reserved.
           </p>
         </div>
       </div>

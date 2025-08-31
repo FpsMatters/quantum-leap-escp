@@ -65,7 +65,7 @@ const HowWeOperateSection = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Join Our Learning Journey</h3>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               From market fundamentals to advanced quantitative strategies, we provide a comprehensive 
-              learning path that prepares you for success in the dynamic world of quantitative finance.
+              learning path that prepares you for success in the dynamic world of financial markets.
             </p>
           </Card>
         </div>

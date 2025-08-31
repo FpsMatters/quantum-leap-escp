@@ -170,14 +170,14 @@ const HeroSection = () => {
         {/* Market Data Strips */}
         <div className="absolute top-0 left-0 right-0 market-data p-2 text-xs overflow-hidden">
           <div className="animate-ticker whitespace-nowrap">
-            <span className="inline-block mr-8">📈 QCS Portfolio: +15.7% YTD</span>
+            <span className="inline-block mr-8">📈 QCS Portfolio: Pending...</span>
             {sampleStock && (
               <span className="inline-block mr-8">
                 💹 {sampleStock.symbol}: ${sampleStock.price} ({sampleStock.percent})
               </span>
             )}
-            <span className="inline-block mr-8">🏆 Trading Competition: Live</span>
-            <span className="inline-block mr-8">🎯 Success Rate: 87.3%</span>
+            <span className="inline-block mr-8">🏆 Trading Competition: Pending...</span>
+            <span className="inline-block mr-8">🎯 Success Rate: Pending...</span>
             {stockData.length > 1 && (
               <span className="inline-block mr-8">
                 📊 {stockData[1].symbol}: ${stockData[1].price} ({stockData[1].percent})
@@ -217,12 +217,12 @@ const HeroSection = () => {
                 <div className="flex items-center space-x-6 text-sm font-mono">
                   <div className="flex items-center">
                     <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
-                    <span className="text-accent">ROI: +247%</span>
+                    <span className="text-accent">ROI: Coming soon..</span>
                   </div>
                   <div className="text-white/70">|</div>
-                  <div className="text-accent">Members: 156</div>
+                  <div className="text-accent">Members: 4</div>
                   <div className="text-white/70">|</div>
-                  <div className="text-accent">Trades: 2,847</div>
+                  <div className="text-accent">Trades: Coming soon..</div>
                 </div>
               </div>
             </div>

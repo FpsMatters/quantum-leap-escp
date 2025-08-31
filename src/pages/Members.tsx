@@ -7,34 +7,34 @@ import StockTicker from "@/components/StockTicker";
 
 const members = [
   {
-    name: "Alexandre Dubois",
-    role: "President",
-    year: "Master 2",
-    description: "Former Goldman Sachs intern with expertise in derivatives trading and risk management. Leading our society towards excellence in quantitative finance.",
+    name: "Alex TOUMASSON",
+    role: "President Quant",
+    year: "BSC 2",
+    description: "Former BNP Paribas intern with expertise in Crypto and liquid futures trading and risk management. Leading our society towards excellence in quantitative finance.",
     icon: Users2,
-    specialty: "Leadership & Strategy"
+    specialty: "Algorithmic trading"
   },
   {
-    name: "Sofia Rodriguez",
-    role: "VP Trading",
-    year: "Master 1", 
-    description: "Passionate about algorithmic trading and market microstructure. Previously worked at BNP Paribas trading desk during summer internship.",
+    name: "Lucas THAI",
+    role: "President of Trading",
+    year: "BSC 2", 
+    description: "Passionate about fundemental analysis of equities. Leading our society towards excellence in manual investments. ",
     icon: TrendingUp,
-    specialty: "Algorithmic Trading"
+    specialty: "Fundemental analysis with macro"
   },
   {
-    name: "Marcus Chen",
-    role: "VP Quantitative Research",
-    year: "Master 2",
-    description: "PhD in Mathematical Finance candidate. Specializes in machine learning applications in finance and high-frequency trading strategies.",
+    name: "Arsene LEFEBVRE",
+    role: "President of Marketing ",
+    year: "BSC 2",
+    description: "Experience in growing social media pages. Previous business intern at a big film distribution company",
     icon: BarChart3,
-    specialty: "Quantitative Modeling"
+    specialty: "Marketing"
   },
   {
-    name: "Emma Thompson",
-    role: "VP Operations",
-    year: "Master 1",
-    description: "Experienced in financial technology and blockchain applications. Manages our partnerships with leading fintech companies and trading platforms.",
+    name: "Mattéo ADAM",
+    role: "President of Operations",
+    year: "BSC 2",
+    description: "Specializing in software and web related developments. Previous intern in the legal sector.",
     icon: Settings,
     specialty: "Operations & Partnerships"
   }

@@ -33,7 +33,7 @@ const MembersSection = () => {
             <span className="text-accent animate-pulse-gold">Leadership Team</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-delay text-center">
-            Driven by passion, guided by expertise. Our team brings together the brightest minds in quantitative finance.
+            Driven by passion, guided by expertise. Our team brings together the brightest minds in financial markets.
           </p>
         </div>
 
@@ -53,9 +53,9 @@ const MembersSection = () => {
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-pulse-gold" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-bold text-white mb-2">Leadership Role</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">Presidents</h3>
                   <div className="text-accent text-sm font-mono mb-2 animate-pulse-gold">
-                    {["President", "VP Trading", "VP Quant", "VP Operations"][i]}
+                    {["President Trading", "President Quant", "President Marketing", "President Operations"][i]}
                   </div>
                   <p className="text-white/70 text-xs">
                     Meet our exceptional team member

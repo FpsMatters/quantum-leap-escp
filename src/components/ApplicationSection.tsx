@@ -7,7 +7,7 @@ const applicationSteps = [
     icon: FileText,
     title: "Complete Application",
     description: "Fill out our comprehensive application form with your background and interests",
-    duration: "5 minutes"
+    duration: "15 minutes"
   },
   {
     icon: UserCheck,
@@ -130,15 +130,15 @@ const ApplicationSection = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent font-mono">24h</div>
+                <div className="text-2xl font-bold text-accent font-mono">48h</div>
                 <div className="text-sm text-white/60">Avg Response</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent font-mono">95%</div>
+                <div className="text-2xl font-bold text-accent font-mono">Coming soon..</div>
                 <div className="text-sm text-white/60">Acceptance Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent font-mono">156</div>
+                <div className="text-2xl font-bold text-accent font-mono">4</div>
                 <div className="text-sm text-white/60">Current Members</div>
               </div>
             </div>
@@ -153,7 +153,7 @@ const ApplicationSection = () => {
               </div>
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-2 text-accent" />
-                <span>Next Meeting: Thursday 18:00</span>
+                <span>Next Meeting: Pending...</span>
               </div>
             </div>
           </div>

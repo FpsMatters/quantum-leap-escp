@@ -6,30 +6,30 @@ const activities = [
   {
     icon: TrendingUp,
     title: "Live Trading Labs",
-    description: "Real-time trading with $50K simulated capital using Bloomberg Terminal and professional platforms",
+    description: "Real-time trading with $100K simulated capital using Bloomberg Terminal and professional platforms",
     color: "bg-quantum-gradient",
-    stats: "2-3x/week"
+    stats: "Weekly"
   },
   {
     icon: Brain,
     title: "Quant Workshops",
     description: "Machine learning models, algorithmic strategies, and quantitative risk management techniques",
     color: "bg-gold-gradient",
-    stats: "Weekly"
+    stats: "Monthly"
   },
   {
     icon: Trophy,
     title: "Trading Competitions",
     description: "Inter-university tournaments with €10K+ prize pools and recruitment opportunities",
     color: "bg-quantum-gradient",
-    stats: "4x/year"
+    stats: "Yearly"
   },
   {
     icon: Network,
     title: "Industry Networking",
     description: "Exclusive access to hedge fund managers, prop traders, and quantitative researchers",
     color: "bg-gold-gradient",
-    stats: "Monthly"
+    stats: "2x/year"
   },
   {
     icon: Code,
@@ -43,14 +43,14 @@ const activities = [
     title: "Market Analysis",
     description: "Technical and fundamental analysis of global markets, crypto, commodities, and derivatives",
     color: "bg-gold-gradient",
-    stats: "Daily"
+    stats: "Weekly"
   },
   {
     icon: Target,
     title: "Risk Management",
     description: "Advanced portfolio theory, VaR modeling, and stress testing methodologies",
     color: "bg-quantum-gradient",
-    stats: "Weekly"
+    stats: "Per Semester"
   }
 ];
 
@@ -104,7 +104,7 @@ const WhatWeDoSection = () => {
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span className="text-accent font-mono text-sm">Markets Open • Active Trading</span>
             <div className="text-white/60">|</div>
-            <span className="text-white/80 text-sm">Live P&L: +€12,847</span>
+            <span className="text-white/80 text-sm"></span>
           </div>
         </div>
         
@@ -142,7 +142,7 @@ const WhatWeDoSection = () => {
               Join our next trading session and experience professional-grade market analysis firsthand
             </p>
             <div className="flex items-center justify-center space-x-4 text-accent font-mono text-sm">
-              <span>📅 Next Session: Thu 18:00</span>
+              <span>📅 Next Session: Pending..</span>
               <span>|</span>
               <span>🏢 ESCP Trading Floor</span>
             </div>

@@ -29,10 +29,10 @@ const AboutSection = () => {
         {/* Performance Dashboard */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           {[
-            { title: "Annual Return", value: "+247%", icon: "📈" },
-            { title: "Win Rate", value: "87.3%", icon: "🎯" },
-            { title: "Active Members", value: "156", icon: "👥" },
-            { title: "Total Trades", value: "2,847", icon: "💹" }
+            { title: "Annual Return", value: "coming soon..", icon: "📈" },
+            { title: "Win Rate", value: "coming soon..", icon: "🎯" },
+            { title: "Active Members", value: "4", icon: "👥" },
+            { title: "Total Trades", value: "coming soon..", icon: "💹" }
           ].map((stat, index) => (
             <Card 
               key={index}
@@ -64,8 +64,8 @@ const AboutSection = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 To become Europe's leading student trading society, recognized for producing exceptional 
                 quantitative analysts and traders who drive innovation in financial markets. We envision 
-                a community where students master both the art and science of trading while building 
-                lasting professional networks in the finance industry.
+                a community where students master both the art of trading and the strategic execution 
+                through compounding to accelerate the growth of your professional investment portfolios. 
               </p>
             </Card>
           </div>
