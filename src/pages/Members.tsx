@@ -67,9 +67,9 @@ const Members = () => {
               <Users2 className="w-10 h-10 text-accent" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 animate-fade-in">
-              Our <span className="text-accent animate-trading-glow">Leadership Team</span>
+              Our <span className="text-accent animate-pulse-gold">Leadership Team</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-delay">
+            <p className="text-xl text-black max-w-3xl mx-auto animate-fade-in-delay">
               Meet the exceptional individuals driving innovation in quantitative finance at ESCP
             </p>
           </div>
@@ -108,7 +108,7 @@ const Members = () => {
                           {member.name}
                         </h3>
                         <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <span className="text-accent font-bold text-lg animate-trading-glow">
+                          <span className="text-accent font-bold text-lg animate-pulse-gold">
                             {member.role}
                           </span>
                           <span className="text-primary/60 text-sm">•</span>
@@ -145,7 +145,7 @@ const Members = () => {
                 <p className="text-xl text-white/70 text-center">
                   Our society is growing! More talented individuals will be joining our leadership team soon.
                 </p>
-                <div className="flex items-center space-x-2 text-accent font-mono animate-trading-glow">
+                <div className="flex items-center space-x-2 text-accent font-mono animate-pulse-gold">
                   <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                   <span>Coming Soon...</span>
                 </div>

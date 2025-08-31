@@ -25,9 +25,10 @@ const StockTicker = () => {
   return (
     <div className="bg-quantum-gradient py-4 overflow-hidden border-y-2 border-accent/30">
       <div className="animate-ticker whitespace-nowrap">
-        <div className="inline-flex items-center space-x-8">
+        <div className="inline-flex items-center space-x-4">
+          {/* Duplicate the stock data to create seamless scrolling */}
           {[...stockData, ...stockData].map((stock, index) => (
-            <div key={index} className="flex items-center space-x-2 text-white font-mono">
+            <div key={`${stock.symbol}-${index}`} className="flex items-center space-x-2 text-white font-mono">
               <span className="font-bold text-accent">{stock.symbol}</span>
               <span className="text-lg">${stock.price}</span>
               <span className={`text-sm ${stock.change.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>

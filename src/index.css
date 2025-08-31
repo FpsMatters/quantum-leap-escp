@@ -166,7 +166,7 @@
   }
   
   .animate-ticker {
-    animation: ticker 20s linear infinite;
+    animation: ticker 40s linear infinite;
   }
   
   .animate-pulse-slow {

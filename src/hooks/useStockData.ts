@@ -124,10 +124,12 @@ const useStockData = () => {
           }
         }
         
-        if (results.length > 0) {
+        if (results.length === symbols.length) {
           setStockData(results);
-          console.log('Successfully fetched some real-time stock data via Alpha Vantage');
+          console.log('Successfully fetched all real-time stock data via Alpha Vantage');
           return;
+        } else if (results.length > 0) {
+          console.log(`Only fetched ${results.length} stocks from Alpha Vantage, falling back to simulated data for all stocks`);
         }
       } catch (error) {
         console.warn('Alpha Vantage API failed:', error);
@@ -141,7 +143,7 @@ const useStockData = () => {
       const enhancedData = symbols.map(symbol => {
         // Use more realistic current prices (updated as of 2024)
         const currentPrices: { [key: string]: number } = {
-          'AAPL': 232.50, // Current Apple price as mentioned by user
+          'AAPL': 232.50,
           'GOOGL': 165.80,
           'MSFT': 428.90,
           'TSLA': 248.50,
@@ -168,6 +170,7 @@ const useStockData = () => {
       });
       
       setStockData(enhancedData);
+      console.log('Stock data set - all 8 stocks:', enhancedData);
     } catch (error) {
       console.error('Error fetching stock data:', error);
       setError('Failed to fetch stock data');
@@ -205,7 +208,37 @@ const useStockData = () => {
   };
 
   useEffect(() => {
-    // Fetch data immediately
+    // Initialize with fallback data immediately to prevent empty state
+    const fallbackData = symbols.map(symbol => {
+      const currentPrices: { [key: string]: number } = {
+        'AAPL': 232.50,
+        'GOOGL': 165.80,
+        'MSFT': 428.90,
+        'TSLA': 248.50,
+        'NVDA': 135.40,
+        'META': 563.20,
+        'AMZN': 188.40,
+        'NFLX': 705.60
+      };
+      
+      const basePrice = currentPrices[symbol] || 100;
+      const variation = (Math.random() - 0.5) * 0.02;
+      const currentPrice = basePrice * (1 + variation);
+      const change = basePrice * variation;
+      const changePercent = variation * 100;
+      
+      return {
+        symbol,
+        price: currentPrice.toFixed(2),
+        change: change >= 0 ? `+${change.toFixed(2)}` : change.toFixed(2),
+        percent: changePercent >= 0 ? `+${changePercent.toFixed(2)}%` : `${changePercent.toFixed(2)}%`
+      };
+    });
+    
+    setStockData(fallbackData);
+    setLoading(false);
+    
+    // Then try to fetch real data
     fetchStockData();
 
     // Set up interval to refresh data every 30 seconds
