@@ -7,7 +7,7 @@ const MembersSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="members" className="py-20 bg-gradient-to-br from-quantum-deep-blue via-background to-quantum-deep-blue relative overflow-hidden">
+    <section id="members" className="py-20 bg-gradient-to-b from-quantum-deep-blue via-quantum-deep-blue to-background relative overflow-hidden">
       {/* Floating Elements */}
       <div className="absolute inset-0 opacity-10">
         {Array.from({ length: 8 }, (_, i) => (

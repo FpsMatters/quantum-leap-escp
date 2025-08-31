@@ -36,7 +36,7 @@ const achievements = [
 
 const WhyJoinSection = () => {
   return (
-    <section id="why-join" className="py-20 bg-background relative overflow-hidden">
+    <section id="why-join" className="py-20 bg-gradient-to-b from-background via-background to-background relative overflow-hidden">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full">

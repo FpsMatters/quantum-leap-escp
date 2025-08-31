@@ -56,7 +56,7 @@ const activities = [
 
 const WhatWeDoSection = () => {
   return (
-    <section id="what-we-do" className="py-20 bg-quantum-gradient relative overflow-hidden">
+    <section id="what-we-do" className="py-20 bg-gradient-to-b from-background via-quantum-deep-blue to-quantum-deep-blue relative overflow-hidden">
       {/* Quant Workspace Background */}
       <div 
         className="absolute inset-0 opacity-10"

@@ -4,7 +4,7 @@ import financialChartsImage from "@/assets/financial-charts.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-background relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-b from-quantum-deep-blue via-background to-background relative overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-5"
