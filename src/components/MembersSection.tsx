@@ -24,14 +24,14 @@ const MembersSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/20 rounded-full mb-6 animate-pulse-gold">
+        <div className="text-center mb-16 flex flex-col items-center">
+          <div className="flex items-center justify-center w-16 h-16 bg-accent/20 rounded-full mb-6 animate-pulse-gold">
             <Users2 className="w-8 h-8 text-accent" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 animate-fade-in text-center">
             Meet Our <span className="text-accent animate-trading-glow">Leadership Team</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-delay">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-delay text-center">
             Driven by passion, guided by expertise. Our team brings together the brightest minds in quantitative finance.
           </p>
         </div>
