@@ -20,7 +20,7 @@ const activities = [
   {
     icon: Trophy,
     title: "Trading Competitions",
-    description: "Inter-university tournaments with €10K+ prize pools and recruitment opportunities",
+    description: "Inter-university tournaments with prize pools and recruitment opportunities",
     color: "bg-quantum-gradient",
     stats: "Yearly"
   },

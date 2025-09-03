@@ -60,7 +60,7 @@ const WhyJoinSection = () => {
             Why Join <span className="text-accent animate-pulse-gold">Our Society?</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-delay">
-            Unlock exclusive opportunities and accelerate your career in quantitative finance
+            Unlock exclusive opportunities and accelerate your career in financial markets — from traditional investing to quantitative finance.
           </p>
         </div>
         

@@ -33,7 +33,7 @@ const HowWeOperateSection = () => {
             How We Operate
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto animate-fade-in-delay">
-            A structured approach to building quantitative finance expertise
+            Developing deep expertise across financial markets, from hands-on investing to advanced quantitative strategies.
           </p>
         </div>
         

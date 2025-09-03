@@ -33,7 +33,7 @@ const MembersSection = () => {
             <span className="text-accent animate-pulse-gold">Leadership Team</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-delay text-center">
-            Driven by passion, guided by expertise. Our team brings together the brightest minds in financial markets.
+            Driven by passion, guided by expertise. Our team brings together the brightest minds in the financial markets industry.
           </p>
         </div>
 
