@@ -3,7 +3,7 @@ import { CheckCircle, TrendingUp, Award, Users2 } from "lucide-react";
 import TradingTerminal from "./TradingTerminal";
 
 const benefits = [
-  "Access to professional trading platforms and real-time market data",
+  "Access to professional trading platforms and real-time market data (COMING SOON)",
   "Mentorship from industry professionals and alumni in top financial institutions", 
   "Participation in exclusive networking events and career fairs",
   "Hands-on experience with quantitative modeling and algorithmic trading",
